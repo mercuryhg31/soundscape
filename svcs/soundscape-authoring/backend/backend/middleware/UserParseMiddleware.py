@@ -49,9 +49,12 @@ def aad_user_from_id_token(id_token):
 
         aad_user['claims'] = parsed_claims
         aad_user['id'] = parsed_claims['oid']
-        aad_user['email'] = parsed_claims['email']
-        aad_user['name'] = parsed_claims['name']
-        aad_user['preferred_username'] = parsed_claims['preferred_username']
+        # aad_user['email'] = parsed_claims['email']
+        # aad_user['name'] = parsed_claims['name']
+        # aad_user['preferred_username'] = parsed_claims['preferred_username']
+        aad_user['email'] = 'users@example.com'
+        aad_user['name'] = 'John Doe'
+        aad_user['preferred_username'] = 'johndoe'
 
     return aad_user
 
