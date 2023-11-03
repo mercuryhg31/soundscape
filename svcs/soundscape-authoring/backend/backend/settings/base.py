@@ -39,7 +39,8 @@ if 'WEBSITE_HOSTNAME' in os.environ:
 
 # Configure admins for getting notified of errors
 ADMINS = [('NAME', 'EMAIL')]
-SERVER_EMAIL = 'django@author.yourdomain.com'
+# SERVER_EMAIL = 'django@author.yourdomain.com'
+SERVER_EMAIL = 'soundscape.buddhism103@passinbox.com'
 
 # Application definition
 
