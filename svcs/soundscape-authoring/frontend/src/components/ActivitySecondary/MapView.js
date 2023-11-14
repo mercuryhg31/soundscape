@@ -404,6 +404,7 @@ export default class MapView extends React.Component {
 
     return (
       <MapContainer bounds={this.bounds()} zoom={19} worldCopyJump={true} ref={this.setMap} attributionControl={false}>
+        <TileLayer attribution={osmMapAttribution} url={osmMapUrl()}/>
         <LayersControl position="topright">
           {/* Default layers */}
           {/* {osmMapsTilesetIDs.map((tilesetID) => (
@@ -421,11 +422,11 @@ export default class MapView extends React.Component {
           </LayersControl.BaseLayer> */}
 
           {/* DEV layers */}
-          {process.env.NODE_ENV === 'local' && (
+          {/* {process.env.NODE_ENV === 'development' && (
             <LayersControl.BaseLayer name={OSM_MAP_TILE_LAYER_DATA.name}>
               <TileLayer url={OSM_MAP_TILE_LAYER_DATA.url} attribution={OSM_MAP_TILE_LAYER_DATA.attribution} />
             </LayersControl.BaseLayer>
-          )}
+          )} */}
           <LayersControl.Overlay checked name="Waypoints">
             <LayerGroup>
               {this.waypointMarkersPolyline()}

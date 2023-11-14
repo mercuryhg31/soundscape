@@ -13,7 +13,7 @@ export const osmMapsTilesetIDs = [
 ];
 
 let defaultMapOptions = {
-  tilesetId: 'microsoft.base.road',
+  tilesetId: '{s}',
   tileSize: '256',
   language: 'en-US',
   view: 'Auto',
