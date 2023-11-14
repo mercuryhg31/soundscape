@@ -404,7 +404,7 @@ export default class MapView extends React.Component {
 
     return (
       <MapContainer bounds={this.bounds()} zoom={19} worldCopyJump={true} ref={this.setMap} attributionControl={false}>
-        <TileLayer attribution={osmMapAttribution} url={osmMapUrl()}/>
+        <TileLayer attribution={OSM_MAP_TILE_LAYER_DATA.attribution} url={OSM_MAP_TILE_LAYER_DATA.url}/>
         <LayersControl position="topright">
           {/* Default layers */}
           {/* {osmMapsTilesetIDs.map((tilesetID) => (
