@@ -93,7 +93,10 @@ class API {
   }
 
   async createActivity(activity) {
+    console.log("HEREEEE\n");
+    console.log(activity);
     const activity_ = Object.assign({}, activity);
+    console.log(activity_);
 
     if (auth.isAuthenticated) {
       activity_.author_id = auth.userId;
@@ -102,14 +105,22 @@ class API {
 
     // We use FormData as the object may contain a file (featured image)
     const formData = objectToFormData(activity_);
+    console.log("FORM DATA-------------------");
+    console.log(formData);
     return axios.post('activities/', formData, multipartRequestConfig).then((data) => {
+      console.log("---------DATA----------");
+      console.log(data);
       return new Activity(data);
     });
   }
 
   async importActivity(gpx) {
     const formData = objectToFormData({ gpx });
+    console.log("IMPORT FORM DATA-------------------");
+    console.log(formData);
     return axios.post('activities/import_gpx/', formData, multipartRequestConfig).then((data) => {
+      console.log("---------DATA----------");
+      console.log(data);
       return new Activity(data);
     });
   }
