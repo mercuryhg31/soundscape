@@ -25,6 +25,7 @@ export default class ActivityUpdateModal extends React.Component {
   createActivity(activity) {
     const toastId = showLoading('Creating activity...');
     const self = this;
+    console.log("CREATING activity in update modal");
 
     return new Promise((resolve, reject) => {
       API.createActivity(activity)
@@ -46,6 +47,7 @@ export default class ActivityUpdateModal extends React.Component {
   updateActivity(activity) {
     const toastId = showLoading('Updating activity...');
     const self = this;
+    console.log("UPDATING activity in update modal");
 
     return new Promise((resolve, reject) => {
       API.updateActivity(activity)

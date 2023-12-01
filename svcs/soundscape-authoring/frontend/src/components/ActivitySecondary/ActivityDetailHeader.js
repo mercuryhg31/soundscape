@@ -51,7 +51,7 @@ export default function ActivityDetailHeader(props) {
               href={`/api/v1/activities/${props.activity.id}/export_gpx/`}>
               <span data-feather="external-link"></span>
               <ExternalLink className="me-1" size={16} style={{ verticalAlign: '-10%' }} />
-              Export
+              Export hello
             </Button>
             <Button variant="outline-secondary" aria-label="Duplicate Activity" onClick={props.onActivityDuplicate}>
               <Copy className="me-1" size={16} style={{ verticalAlign: '-10%' }} />
